@@ -1,0 +1,94 @@
+<br>
+<section> 
+    <h4 class="text-center font-bold text-3xl text-sky-900">Registrar usuario</h4>
+    <br>
+    <form class = "max-w-md mx-auto"[formGroup]="nuevoUsuario" (ngSubmit)="crearNuevoUsuario()">
+        <div class="mb-5">
+            <label  class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Nombre</label>
+            <input type="text" formControlName = "Nombres" class="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500 dark:shadow-sm-light" required>
+        </div>
+        <div class="mb-5">
+            <label  class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Apellidos</label>
+            <input type="text" formControlName = "Apellidos" class="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500 dark:shadow-sm-light" required>
+        </div>
+        <div class="mb-5">
+            <label  class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Identificación </label>
+            <input type="text" formControlName = "Identificacion" class="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500 dark:shadow-sm-light" required>
+        </div>
+        <div class="mb-5">
+            <label  class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Perfil</label>
+            <input type="text" formControlName = "Perfil" class="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500 dark:shadow-sm-light" required>
+        </div>
+        <div class="mb-5">
+            <label  class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Contraseña</label>
+            <input type="text" formControlName = "Contraseña" class="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500 dark:shadow-sm-light" required>
+        </div>
+        <button onclick="window.location.reload()" class=" w-full text-white bg-blue-600 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"[disabled]="!nuevoUsuario.valid"  type="submit">Crear</button>
+      </form>
+</section>
+<br>
+<section>
+    <h5 class="text-center font-bold text-3xl  text-sky-900 ">Eliminar Usuario</h5>
+    <br>
+    <form class = "max-w-md mx-auto"[formGroup]="usuarioEliminar" (ngSubmit)="eliminarUsuario()">
+        <div class="mb-5">
+            <label  class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Ingrese la identificación del usuario</label>
+            <input type="text" formControlName = "identificacionEliminar" class="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500 dark:shadow-sm-light" required>
+        </div>
+        <button onclick="window.location.reload()" class="w-full text-white bg-blue-600 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"[disabled]="!usuarioEliminar.valid"  type="submit">Eliminar</button>
+    </form>
+</section>
+<br>
+<section> 
+    <h1 class="text-center font-bold text-3xl text-sky-900">Actualizar usuario</h1>
+    <br>
+    <form class = "max-w-md mx-auto"[formGroup]="usuarioEditado" (ngSubmit)="editarUsuario()">
+        <div class="mb-5">
+            <label  class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Nombre</label>
+            <input type="text" formControlName = "NombresEditar" class="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500 dark:shadow-sm-light" required>
+        </div>
+        <div class="mb-5">
+            <label  class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Apellidos </label>
+            <input type="text" formControlName = "ApellidosEditar" class="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500 dark:shadow-sm-light" required>
+        </div>
+        <div class="mb-5">
+            <label  class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Identificación </label>
+            <input type="text" formControlName = "IdentificacionEditar" class="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500 dark:shadow-sm-light" required>
+        </div>
+        <div class="mb-5">
+            <label  class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Perfil </label>
+            <input type="text" formControlName = "PerfilEditar" class="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500 dark:shadow-sm-light" required>
+        </div>
+        <div class="mb-5">
+            <label  class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Contraseña </label>
+            <input type="text" formControlName = "ContraseñaEditar" class="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500 dark:shadow-sm-light">
+        </div>
+        <button onclick="window.location.reload()" class=" w-full text-white bg-blue-600 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800" type="submit">Actualizar</button>
+      </form>
+</section>
+<br>
+<section>
+    <h1 class="text-center font-bold text-3xl text-sky-900">Usuarios</h1>
+    <br>
+<div class="flex flex-col justify-center">
+    <table class= "bg-sky-100 ">
+      <thead class="border-black border bg-sky-200 border-2">
+        <tr class="border border-black ">
+          <th class="border border-black ">Identificación</th>
+          <th class="border border-black ">Nombres</th>
+          <th class="border border-black ">Apellidos</th>
+          <th class="border border-black ">Perfil</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr class="border-b border-t border-black border-2" *ngFor="let user of data">
+          <td class=" ">{{ user.identificacion }}</td>
+          <td class="">{{ user.nombres }}</td>
+          <td class=" ">{{ user.apellidos }}</td>
+          <td class=" ">{{ user.perfil }}</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  <section>
+    <br>
